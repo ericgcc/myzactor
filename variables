@@ -1,0 +1,14 @@
+max_user_connections
+key_buffer_size
+key_cache_block_size
+max_binlog_size
+max_connections
+open_files_limit
+query_cache_size
+read_buffer_size
+thread_cache_size
+read_rnd_buffer_size
+sort_buffer_size
+thread_stack
+join_buffer_size
+version

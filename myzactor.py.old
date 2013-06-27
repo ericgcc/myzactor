@@ -1,0 +1,91 @@
+#!/usr/local/python-3.3/bin/python3.3
+
+#####################################################
+#MySQL Zabbix Collector - Recolector de Estadisticas#
+#####################################################
+
+import subprocess
+import sys
+import logging
+
+#######################################
+#VARIABLES DE CONFIGURACION DEL SCRIPT#
+#######################################
+
+#Ruta absoluta al archivo de configuracion opcional
+#Este archivo se utiliza para no escribir password y ususario
+MYCNF = '/home/zabbix/.my.cnf'
+VARIABLES = './variables'
+
+#Ruta absoluta al ejecutable de MySQL
+MYSQL = '$(which mysql)'
+
+GLOBAL_VARIABLES = 'SHOW GLOBAL VARIABLES'
+GLOBAL_STATUS = 'SHOW GLOBAL STATUS'
+
+logging.basicConfig(format='%(asctime)s (%(name)s) >> ' +
+                    '%(levelname)s: %(message)s',
+                    datefmt='%d-%m-%Y %H:%M',
+                    filename='/tmp/myzactor.log', level=logging.DEBUG)
+
+######################################
+#AQUI INICIA LO BUENO!!!             #
+######################################
+
+#Validacion del numero de parametros de la entrada
+if len(sys.argv) < 4:
+    sys.stderr.write("Muy pocos parametros\n")
+    sys.exit(1)
+
+HOST = sys.argv[3]
+
+if sys.argv[1] == 'status':
+    comando = MYSQL + " --defaults-extra-file=" + MYCNF + " -e \"" + \
+    GLOBAL_STATUS + " LIKE \'" + sys.argv[2] + "\'\" -h %s" % (HOST)
+
+elif sys.argv[1] == 'variable':
+    comando = MYSQL + " --defaults-extra-file=" + MYCNF + " -e \"" + \
+    GLOBAL_VARIABLES + " LIKE \'" + sys.argv[2] + "\'\" -h %s" % (HOST)
+
+else:
+    sys.stderr.write("Parametro no esperado: %s \n" % (sys.argv[1]))
+    sys.exit(1)
+
+try:
+    #Se ejecuta el comando y se captura la salida,
+    #el resultado es un objeto de bytes
+    output = subprocess.check_output(comando, shell=True,
+                                    stderr=subprocess.PIPE)
+except Exception as e:
+    output = subprocess.Popen(comando, shell=True, stderr=subprocess.PIPE)
+    output = output.stderr.read()
+    output = str(output)
+    output = output[2:-3]
+    print(output)
+    logging.error(output)
+    sys.exit(1)
+
+if output == b'':
+    sys.stderr.write("El parametro \'%s\' " % (sys.argv[2]) +
+    "no existe en MySQL\n")
+    sys.exit(1)
+
+#Se convierte el objeto de bytes en cadena
+output = str(output)
+
+#Se eliminan los caracteres que sobran y obtenemos solo los datos necesarios
+output = output.split('\\n')
+output = output[1].split('\\t')
+
+#print (output[1])
+
+output[0] = "mysql.variable." + output[0]
+
+command = "$(which zabbix_sender) -z 132.248.119.200 -s \"EXAMENESP\" -k " + \
+output[0] + " -o " + output[1]
+
+print(command)
+
+
+#El programa termino correctamente
+sys.exit(0)

@@ -1,0 +1,78 @@
+#CONTENIDOS 132.248.50.2
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from CONTENIDOS in 132.248.50.2 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from CONTENIDOS in 132.248.50.2 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from CONTENIDOS in 132.248.50.2 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from CONTENIDOS in 132.248.50.2 to 132.248.119.200
+* * * * * fab -H 132.248.50.2 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,CONTENIDOS,132.248.119.200
+* * * * * sleep 30; fab -H 132.248.50.2 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,CONTENIDOS,132.248.119.200
+
+#TEST 132.248.50.7
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from MDL2TST in 132.248.50.7 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from MDL2TST in 132.248.50.7 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from MDL2TST in 132.248.50.7 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from MDL2TST in 132.248.50.7 to 132.248.119.200
+* * * * * fab -H 132.248.50.7 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,MDL2TST,132.248.119.200
+* * * * * sleep 30; fab -H 132.248.50.7 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,MDL2TST,132.248.119.200
+
+#SUA 132.248.62.10
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from SUA in 132.248.62.10 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from SUA in 132.248.62.10 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from SUA in 132.248.62.10 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from SUA in 132.248.62.10 to 132.248.119.200
+* * * * * /usr/bin/fab -H 132.248.62.10 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,SUA,132.248.119.200
+* * * * * sleep 30; /usr/bin/fab -H 132.248.62.10 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,SUA,132.248.119.200
+
+#TRUETA 132.248.62.12
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from TRUETA in 132.248.62.12 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from TRUETA in 132.248.62.12 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from TRUETA in 132.248.62.12 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from TRUETA in 132.248.62.12 to 132.248.119.200
+* * * * * fab -H 132.248.62.12 -f /home/zabbix/consumption.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/servicios/mysql/data,TRUETA,132.248.119.200
+* * * * * sleep 30; fab -H 132.248.62.12 -f /home/zabbix/consumption.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/servicios/mysql/data,TRUETA,132.248.119.200
+
+#EXAMENES 132.248.62.15
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from EXAMENES in 132.248.62.15 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from EXAMENES in 132.248.62.15 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from EXAMENES in 132.248.62.15 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from EXAMENES in 132.248.62.15 to 132.248.119.200
+* * * * * /usr/bin/fab -H 132.248.62.15 -f /home/zabbix/consumption.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/servicios/mysql/data/,EXAMENES,132.248.119.200
+* * * * * sleep 30; /usr/bin/fab -H 132.248.62.15 -f /home/zabbix/consumption.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/servicios/mysql/data/,EXAMENES,132.248.119.200
+
+#SUA-EPRACTICA 132.248.62.17
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from SUA-EPRACTICA in 132.248.62.17 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from SUA-EPRACTICA in 132.248.62.17 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from SUA-EPRACTICA in 132.248.62.17 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from SUA-EPRACTICA in 132.248.62.17 to 132.248.119.200
+* * * * * /usr/bin/fab -H 132.248.62.17 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,SUA-EPRACTICA,132.248.119.200
+* * * * * sleep 30; /usr/bin/fab -H 132.248.62.17 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,SUA-EPRACTICA,132.248.119.200
+
+#INSCRIPCIONES DIPLOMADOS 132.248.62.20
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from 'INSCRIPCIONES DIPLOMADOS' in 132.248.62.20 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from 'INSCRIPCIONES DIPLOMADOS' in 132.248.62.20 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from 'INSCRIPCIONES DIPLOMADOS' in 132.248.62.20 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from 'INSCRIPCIONES DIPLOMADOS' in 132.248.62.20 to 132.248.119.200
+* * * * * fab -H 132.248.62.20 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,'INSCRIPCIONES DIPLOMADOS',132.248.119.200
+
+#REVISTA VETERINARIA 132.248.62.21
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from 'REVISTA VETERINARIA' in 132.248.62.21 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from 'REVISTA VETERINARIA' in 132.248.62.21 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from 'REVISTA VETERINARIA' in 132.248.62.21 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from 'REVISTA VETERINARIA' in 132.248.62.21 to 132.248.119.200
+* * * * * fab -H 132.248.62.21 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,'REVISTA VETERINARIA',132.248.119.200
+* * * * * sleep 30; fab -H 132.248.62.21 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,'REVISTA VETERINARIA',132.248.119.200
+
+#PAPIME 132.248.62.26
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from INTRA2 in 132.248.62.26 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from INTRA2 in 132.248.62.26 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from INTRA2 in 132.248.62.26 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from INTRA2 in 132.248.62.26 to 132.248.119.200
+* * * * * fab -H 132.248.62.26 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,INTRA2,132.248.119.200
+* * * * * sleep 30; fab -H 132.248.62.26 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,INTRA2,132.248.119.200
+
+#APUNTES EN LINEA 132.248.62.28
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from APNTSENLNEA in 132.248.62.28 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py variable /home/zabbix/variables from APNTSENLNEA in 132.248.62.28 to 132.248.119.200
+* * * * * /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from APNTSENLNEA in 132.248.62.28 to 132.248.119.200
+* * * * * sleep 30; /usr/local/python-3.3/bin/python3.3 /home/zabbix/myzactor.py status /home/zabbix/status from APNTSENLNEA in 132.248.62.28 to 132.248.119.200
+* * * * * fab -H 132.248.62.28 --port=2290 -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,APNTSENLNEA,132.248.119.200
+* * * * * sleep 30; fab -H 132.248.62.28 --port=2290  -f /home/zabbix/consumption2.py -u mysql measure:mysql,mysql,--h93uYVEI#9x*g9,/var/lib/mysql,APNTSENLNEA,132.248.119.200
